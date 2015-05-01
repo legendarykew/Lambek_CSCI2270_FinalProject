@@ -1,7 +1,7 @@
 #include <iostream>
 //#include <windows.h>
 #include <vector>
-#include "primeSieve.h"
+#include "../include/primeSieve.h"
 
 using namespace std;
 

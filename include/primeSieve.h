@@ -20,6 +20,7 @@ class primeSieve
         void MaxGap();
         void checkPrime(int);
         void primeFactor(int);
+        void primeFactorAll();
 
     protected:
     private:

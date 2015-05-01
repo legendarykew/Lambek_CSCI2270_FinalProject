@@ -13,7 +13,8 @@ void printOptions()
     std::cout<<"2: Find the max gap between all the primes"<<std::endl;
     std::cout<<"3: print primes and multiples"<<std::endl;
     std::cout<<"4: Prime factorization"<<std::endl;
-    std::cout<<"5: Quit"<<std::endl;
+    std::cout<<"5: Prime factorize all"<<std::endl;
+    std::cout<<"6: Quit"<<std::endl;
 
 
 }
@@ -55,6 +56,9 @@ primeSieve::~primeSieve()
                 std::cout<<std::endl;
                 break;
             case 5:
+                primeFactorAll();
+                break;
+            case 6:
                 q = false;
                 break;
         }
@@ -161,8 +165,6 @@ bool primeSieve::isprime(int p)
     return true;
 }
 
-
-
 void primeSieve::primeFactor(int num)
 {
     bool t = true;
@@ -185,5 +187,21 @@ void primeSieve::primeFactor(int num)
                 break;
             }
         }
+    }
+}
+
+/* Using this new function as an example of documentation.
+
+primeFactorAll()
+
+Takes the primeFactor(int) function, then iterates up through the maximum number provided by user, to provide all factorizations.
+
+Ex. primeFactorAll(), outputs all factorizations.
+
+*/
+void primeSieve::primeFactorAll(){
+    for(int i=2;i<maxNum;i++){
+            std::cout<<"Factorization for "<<i<<'=';
+            primeFactor(i);
     }
 }
